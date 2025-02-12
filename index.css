@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #0d1117;
+  --secondColor: #e7e7e7;
+  --cardColor: rgba(255, 255, 255, 0.11);
+  --lineColor: #e7e7e723;
+  --overLayColor: rgba(0, 0, 0, 0.481);
+}
+body {
+  font-family: "Readex Pro", serif;
+  color: var(--secondColor);
+}
+main {
+  background-color: var(--mainColor);
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+}
+main .cards {
+  padding: 20px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  /* flex-direction: column; */
+}
+main .cards .cardsData {
+  display: grid;
+  flex-grow: 2;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  place-items: center;
+  gap: 20px;
+}
+main .cards .cardsData .card {
+  min-width: 250px;
+}
+main .cards .add {
+  background-color: var(--cardColor);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  min-width: 250px;
+  align-self: flex-start;
+}
+main .cards .add .plus {
+  background-color: var(--mainColor);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .cards .add .plus i {
+  font-size: 20px;
+}
+.cards .card {
+  background-color: var(--cardColor);
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.cards .card p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cards .card .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid var(--lineColor);
+  padding-top: 20px;
+}
+.cards .card .info > div {
+  position: relative;
+}
+.cards .card .info i {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.cards .card .info i + div {
+  background-color: #000;
+  position: absolute;
+  width: 100px;
+  padding: 5px 0px;
+  border-radius: 4px;
+  left: auto;
+  top: auto;
+  z-index: 6;
+display: none;
+  transition: all 200ms linear;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.cards .card .info i + div.appear{
+  display: block;
+}
+.info .can{
+  left: -11px;
+  top: -9px;
+  position: absolute;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #ff0000cc;
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards .card .info i + div li {
+  padding: 8px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.cards .card .info i + div li:hover {
+  background-color: var(--mainColor);
+}
+
+/* puppel */
+main .puppel {
+  background-color: #050404;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: fixed;
+  z-index: 999;
+  scale: 0;
+}
+main .puppel.appear {
+  scale: 1;
+}
+main .puppel .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .puppel form {
+  margin-top: 20px;
+  min-width: 290px;
+}
+main .puppel form input,
+main .puppel form textarea {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--secondColor);
+  padding: 10px;
+  color: var(--secondColor);
+}
+main .puppel form input::placeholder,
+main .puppel form textarea::placeholder {
+  color: var(--secondColor);
+}
+main .puppel form textarea {
+  resize: none;
+  height: 140px;
+}
+main .puppel form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  border: 3px solid var(--mainColor);
+  background-color: var(--cardColor);
+  color: var(--secondColor);
+  cursor: pointer;
+  font-weight: bold;
+}
+main .puppel form p:last-child {
+  margin-block: 10px;
+  text-align: center;
+  border: 1px solid rgb(187, 26, 26);
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: none;
+}
+main .puppel form p.appear:last-child {
+  display: block;
+}
+/* global */
+li {
+  list-style: none;
+}

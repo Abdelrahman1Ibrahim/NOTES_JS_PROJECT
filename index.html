@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+        <link rel="stylesheet" href="index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Readex+Pro:wght@160..700&family=Roboto:wght@400;500;700;900&family=Sacramento&family=Titillium+Web:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>NOTES_JS_PROJECT</title>
+    </head>
+    <body>
+        <main class="project">
+            <h1>🤩 ملاحظاتك</h1>
+            <div class="cards">
+                <div class="add">
+                    <div class="plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <p>>أضف ملاحظة جديدة</p>
+                </div>
+                <div class="cardsData">
+                 
+                </div>
+            </div>
+            <div class="puppel" >
+                <div class="header">
+                    <p>أضف ملاحظة جديدة</p>
+                    <i class="fa-solid fa-xmark cancel" style="cursor: pointer;"></i>
+                </div>
+                <form action="">
+                    <label for="title">العنوان</label>
+                    <input id="title" type="text" placeholder="عنوان الملاحظة" />
+                    <label for="description">الوصف</label>
+                    <textarea name="" id="description"  placeholder="محتوى الملاحظة"></textarea>
+                    <button class="collect">أضف</button>
+                    <p class="addInput">يجب ملأ كل البيانات </p>
+                </form>
+            </div>
+        </main>
+
+        <script src="index.js"></script>
+    </body>
+</html>
